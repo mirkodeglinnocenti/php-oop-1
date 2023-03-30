@@ -2,9 +2,9 @@
 
 require_once "./movie.php";
 
-$thor = new Movie();
-$thor->titolo = "thor";
+$thor = new Movie("thor");
 $thor->genere = "azione";
+$thor->durata = 1.35;
 
 var_dump($thor);
 
@@ -24,6 +24,14 @@ var_dump($thor);
         <ul>
             <li>
                 <?php echo $thor->titolo ?>
+                <ul>
+                    <li>
+                        <?php echo $thor->genere ?>
+                    </li>
+                    <li>
+                        <?php echo $thor->durata ?> h
+                    </li>
+                </ul>
             </li>
         </ul>
     </main>
