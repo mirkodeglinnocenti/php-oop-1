@@ -2,12 +2,19 @@
 
 require_once "./models/movie.php";
 
+// Film 1 - thor
 $thor = new Movie("thor");
 $thor->setAnno(2002);
 $thor->genere = "azione";
 $thor->durata = 1.35;
 
-var_dump($thor);
+// var_dump($thor);
+
+// Film 2 - Fast and Furios
+$fast_and_furios_5 = new Movie("Fast and Furios 5");
+$fast_and_furios_5->setAnno(2014);
+$fast_and_furios_5->genere = "azione";
+$fast_and_furios_5->durata = 2.20;
 
 ?>
 
@@ -34,6 +41,20 @@ var_dump($thor);
                     </li>
                     <li>
                         <?php echo $thor->durata ?> h
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <?php echo $fast_and_furios_5->titolo ?>
+                <ul>
+                    <li>
+                        <?php echo $fast_and_furios_5->genere ?>
+                    </li>
+                    <li>
+                        <?php echo $fast_and_furios_5->anno ?>
+                    </li>
+                    <li>
+                        <?php echo $fast_and_furios_5->durata ?> h
                     </li>
                 </ul>
             </li>
