@@ -1,8 +1,9 @@
 <?php
 
-require_once "./movie.php";
+require_once "./models/movie.php";
 
 $thor = new Movie("thor");
+$thor->setAnno(2002);
 $thor->genere = "azione";
 $thor->durata = 1.35;
 
@@ -27,6 +28,9 @@ var_dump($thor);
                 <ul>
                     <li>
                         <?php echo $thor->genere ?>
+                    </li>
+                    <li>
+                        <?php echo $thor->anno ?>
                     </li>
                     <li>
                         <?php echo $thor->durata ?> h
